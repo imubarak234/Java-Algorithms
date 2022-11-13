@@ -27,10 +27,10 @@ public class palindromeRecursive {
 
     if ((start >= ins.length()) && (count == ins.length())) {
       return true;
-    } else if (ins.charAt(start) == ins.charAt(end - 1)) {
-      return isPalindrome(ins, start + 1, end - 1, count + 1);
     } else if ((start >= ins.length()) && (count < ins.length())) {
       return false;
+    } else if (ins.charAt(start) == ins.charAt(end - 1)) {
+      return isPalindrome(ins, start + 1, end - 1, count + 1);
     } else {
       return isPalindrome(ins, start + 1, end - 1, count);
     }
