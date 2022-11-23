@@ -32,10 +32,10 @@ public class postivesArray {
 
   public static int positiveNumber(double[] x, int start, int count) {
     if (start >= x.length) {
-      return count;
+      return 0;
     } else if (x[start] >= 0) {
       System.out.println("Counts: " + count);
-      return positiveNumber(x, start + 1, count + 1);
+      return positiveNumber(x, start + 1, count) + count;
     } else {
       return positiveNumber(x, start + 1, count);
     }
